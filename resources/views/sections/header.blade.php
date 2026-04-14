@@ -28,7 +28,7 @@ use App\Walkers\MobileDropdownWalker;
 
 
 			<div class="__top-btn">
-				<a href="/zarejestruj-sie//" class="block w-full white-btn-s">
+				<a href="https://infupraktyka.pl/#zarejestruj-sie" class="block w-full white-btn-s">
 					Zarejestruj się
 				</a>
 			</div>
@@ -98,7 +98,7 @@ use App\Walkers\MobileDropdownWalker;
 			@endif
 
 			<div class="__top-btn mt-8">
-				<a href="/zarejestruj-sie/" class="block w-full second-btn">
+				<a href="https://infupraktyka.pl/#zarejestruj-sie" class="block w-full second-btn">
 					Zarejestruj się
 				</a>
 			</div>
