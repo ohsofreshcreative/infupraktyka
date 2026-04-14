@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Block: Product Variants
+   ========================================================================== */
+
+/* Główny kontener dla bloku wariantów */
+.b-product-variants {
+    /* Zakładając, że tło jest ustawione na sekcji nadrzędnej, 
+       możemy dodać padding, aby dać trochę oddechu. */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #1e3a8a; /* Ciemnoniebieskie tło, dopasuj do swojego motywu */
+    color: #ffffff; /* Biały tekst */
+}
+
+.b-product-variants strong {
+    font-size:18px;
+	padding-top:16px;
+	display: inline-block;
+}
+
+/* Stylizacja pojedynczej kolumny wariantu */
+.b-product-variants .variant-column {
+    background-color: rgba(255, 255, 255, 0.05); /* Lekko przezroczyste tło dla kolumny */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Delikatna biała ramka */
+    border-radius: 0.75rem; /* Zaokrąglone rogi */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.b-product-variants .variant-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Tytuł wariantu (np. "Rejestracja - Płatna") */
+.b-product-variants .variant-column h3 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Atrybuty wariantu (np. "Płatna") */
+.b-product-variants .variant-column .text-sm {
+    color: #93c5fd; /* Jaśniejszy niebieski dla podtytułu */
+    margin-bottom: 1.5rem;
+}
+
+/* Kontener na opis */
+.b-product-variants .variant-column .prose {
+    color: #d1d5db; /* Lekko szary tekst dla lepszej czytelności */
+    flex-grow: 1; /* Sprawia, że opis rozpycha się, aby przyciski były na dole */
+}
+
+.b-product-variants .variant-column .prose ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.b-product-variants .variant-column .prose ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Kontener z ceną */
+.b-product-variants .price-wrapper .price {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+ div.price-wrapper.mb-4 > span > bdi {
+		font-size:32px !important; 
+}
+
+/* Formularz dodawania do koszyka */
+.b-product-variants .cart {
+    margin-top: auto; /* Przykleja formularz do dołu kolumny */
+    padding-top: 1.5rem;
+}
+
+/* Stylizacja pola ilości */
+.b-product-variants .quantity .input-text {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 0.375rem;
+    width: 60px;
+    text-align: center;
+}
+
+/* Stylizacja przycisku "Dodaj do koszyka" */
+.b-product-variants .single_add_to_cart_button {
+    background-color: #8b5cf6; /* Fioletowy przycisk, jak na zrzucie */
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Przycisk na całą szerokość */
+}
+
+.b-product-variants .single_add_to_cart_button:hover {
+    background-color: #7c3aed; /* Ciemniejszy fiolet po najechaniu */
+}
+
+.b-product-variants .variant-column .prose ul {
+    list-style-type: disc; /* Ustawia styl punktora na kropkę */
+    list-style-position: inside; /* Umieszcza punktor wewnątrz elementu */
+    padding-left: 0; /* Usuwa domyślny padding, bo punktor jest wewnątrz */
+}
+
+.b-product-variants .variant-column .prose ul li {
+    margin-bottom: 0.5rem;
+    /* Można dodać mały wcięcie, jeśli tekst jest zbyt blisko punktora */
+    /* text-indent: -1.2em; */
+    /* padding-left: 1.2em; */
+}

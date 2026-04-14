@@ -1,0 +1,38 @@
+.wysiwyg {
+    p {
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    ul,
+    ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+}
+
+.wysiwyg.terms {
+	.__txt {
+		max-height:400px;
+		overflow-y:scroll;
+		background-color: #FFF;
+		padding:40px;
+		border:1px solid var(--color-secondary-100);
+		border-radius: 24px;
+	}
+}

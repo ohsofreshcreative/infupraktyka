@@ -5,14 +5,14 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Hero extends Block
+class What extends Block
 {
-	public $name = 'Hero';
-	public $description = 'Hero';
-	public $slug = 'hero';
+	public $name = 'Co to jest?';
+	public $description = 'what';
+	public $slug = 'what';
 	public $category = 'formatting';
-	public $icon = 'align-full-width';
-	public $keywords = ['tresc', 'zdjecie'];
+	public $icon = 'format-status';
+	public $keywords = ['what'];
 	public $mode = 'edit';
 	public $supports = [
 		'align' => false,
@@ -22,40 +22,42 @@ class Hero extends Block
 
 	public function fields()
 	{
-		$hero = new FieldsBuilder('hero');
+		$what = new FieldsBuilder('what');
 
-		$hero
-			->setLocation('block', '==', 'acf/hero') // ważne!
+		$what
+			->setLocation('block', '==', 'acf/what') // ważne!
 			->addText('block-title', [
 				'label' => 'Tytuł',
 				'required' => 0,
 			])
 			->addAccordion('accordion1', [
-				'label' => 'Hero',
+				'label' => 'Co to jest?',
 				'open' => false,
 				'multi_expand' => true,
 			])
-			/*--- TAB #1 ---*/
+			/*--- FIELDS ---*/
 			->addTab('Treść', ['placement' => 'top'])
-			->addGroup('g_hero', ['label' => 'Hero'])
+			->addGroup('what', ['label' => ''])
 			->addImage('image', [
-				'label' => 'Obraz',
-				'return_format' => 'array',
-				'preview_size' => 'medium',
+				'label' => 'Obraz #1',
+				'return_format' => 'array', // lub 'url', lub 'id'
+				'preview_size' => 'thumbnail',
 			])
-			->addText('title', ['label' => 'Tytuł'])
+			->addImage('image2', [
+				'label' => 'Obraz #2',
+				'return_format' => 'array', // lub 'url', lub 'id'
+				'preview_size' => 'thumbnail',
+			])
+			->addText('header', ['label' => 'Tytuł'])
 			->addWysiwyg('txt', [
 				'label' => 'Treść',
 				'tabs' => 'all', // 'visual', 'text', 'all'
 				'toolbar' => 'full', // 'basic', 'full'
 				'media_upload' => true,
+				'rows' => 4,
 			])
-			->addLink('button1', [
-				'label' => 'Przycisk #1',
-				'return_format' => 'array',
-			])
-			->addLink('button2', [
-				'label' => 'Przycisk #2',
+			->addLink('button', [
+				'label' => 'Przycisk',
 				'return_format' => 'array',
 			])
 			->endGroup()
@@ -76,13 +78,13 @@ class Hero extends Block
 				'ui_off_text' => 'Nie',
 			]);
 
-		return $hero;
+		return $what;
 	}
 
 	public function with()
 	{
 		return [
-			'g_hero' => get_field('g_hero'),
+			'what' => get_field('what'),
 			'section_id' => get_field('section_id'),
 			'section_class' => get_field('section_class'),
 			'nomt' => get_field('nomt'),

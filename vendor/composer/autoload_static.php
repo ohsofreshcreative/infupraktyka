@@ -532,6 +532,7 @@ class ComposerStaticInit98f3e1b0ed14492de67a0e6fcacef8b0
     public static $classMap = array (
         'App\\Blocks\\About' => __DIR__ . '/../..' . '/app/Blocks/About.php',
         'App\\Blocks\\Accordion' => __DIR__ . '/../..' . '/app/Blocks/Accordion.php',
+        'App\\Blocks\\Agenda' => __DIR__ . '/../..' . '/app/Blocks/Agenda.php',
         'App\\Blocks\\AreaBlock' => __DIR__ . '/../..' . '/app/Blocks/AreaBlock.php',
         'App\\Blocks\\Benefit' => __DIR__ . '/../..' . '/app/Blocks/Benefit.php',
         'App\\Blocks\\BottomBlock' => __DIR__ . '/../..' . '/app/Blocks/BottomBlock.php',
@@ -575,6 +576,7 @@ class ComposerStaticInit98f3e1b0ed14492de67a0e6fcacef8b0
         'App\\Blocks\\Reviews' => __DIR__ . '/../..' . '/app/Blocks/Reviews.php',
         'App\\Blocks\\Slides' => __DIR__ . '/../..' . '/app/Blocks/Slides.php',
         'App\\Blocks\\Speakers' => __DIR__ . '/../..' . '/app/Blocks/Speakers.php',
+        'App\\Blocks\\Start' => __DIR__ . '/../..' . '/app/Blocks/Start.php',
         'App\\Blocks\\Steps' => __DIR__ . '/../..' . '/app/Blocks/Steps.php',
         'App\\Blocks\\Table' => __DIR__ . '/../..' . '/app/Blocks/Table.php',
         'App\\Blocks\\Tailored' => __DIR__ . '/../..' . '/app/Blocks/Tailored.php',
@@ -591,6 +593,7 @@ class ComposerStaticInit98f3e1b0ed14492de67a0e6fcacef8b0
         'App\\Blocks\\Video' => __DIR__ . '/../..' . '/app/Blocks/Video.php',
         'App\\Blocks\\Works' => __DIR__ . '/../..' . '/app/Blocks/Works.php',
         'App\\Blocks\\Workshops' => __DIR__ . '/../..' . '/app/Blocks/Workshops.php',
+        'App\\Fields\\AgendaSettings' => __DIR__ . '/../..' . '/app/Fields/AgendaSettings.php',
         'App\\Fields\\Area' => __DIR__ . '/../..' . '/app/Fields/Area.php',
         'App\\Fields\\Bottom' => __DIR__ . '/../..' . '/app/Fields/Bottom.php',
         'App\\Fields\\OfferCards' => __DIR__ . '/../..' . '/app/Fields/OfferCards.php',

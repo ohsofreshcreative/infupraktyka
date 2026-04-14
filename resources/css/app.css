@@ -42,6 +42,9 @@
 @import '../css/blocks/slides.scss';
 @import '../css/blocks/agenda.scss';
 @import '../css/blocks/program.scss';
+@import '../css/blocks/wysiwyg.scss';
+@import '../css/blocks/logos.scss';
+@import '../css/blocks/product.scss';
 
 
 /*-- NOT USED --*/

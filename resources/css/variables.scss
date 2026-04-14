@@ -106,20 +106,22 @@ body {
 	--p-darker: #050D18;
 	--p-brand: #174078;
 
-	--secondary: #F59B19;
-	--s-hover: #F7AC3F;
-	--s-50: #FDEBD1;
-	--s-100: #FDEBD1;
-	--s-200: #FCDEB2;
-	--s-300: #FACD8C;
-	--s-400: #F8BC66;
-	--s-500: #F7AC3F;
-	--s-600: #F59B19;
-	--s-700: #CC8115;
-	--s-800: #A36711;
-	--s-900: #7B4E0D;
-	--s-dark: #523408;
-	--s-darker: #311F05;
+	--secondary: #133E79;
+	--s-hover: #3A5E8F;
+
+	--s-50: #D0D8E4;
+	--s-100: #D0D8E4;
+	--s-200: #B0BFD2;
+	--s-300: #899FBC;
+	--s-400: #627EA6;
+	--s-500: #3A5E8F;
+	--s-600: #133E79;
+	--s-700: #103465;
+	--s-800: #0D2951;
+	--s-900: #0A1F3D;
+
+	--s-dark: #061528;
+	--s-darker: #040C18;
 
 	--text-p-light: var(--p-200);
 	--text-p-lighter: var(--p-400);
@@ -676,7 +678,7 @@ h6,
 }
 
 .main-btn {
-	font-family: var(--btns-font);
+	font-family: var(--btns-font) !important;
 	font-size: var(--btns-fontsize);
 	background: var(--primary);
 	color: #fff;
@@ -693,7 +695,7 @@ h6,
 
 .main-btn:hover {
 	color: #fff;
-	background: var(--p-hover);
+	background: var(--p-hover) !important;
 	transition: all 0.2s ease-out;
 	border: 1px solid transparent;
 }
@@ -702,11 +704,11 @@ h6,
 .woocommerce div.product form.cart .button,
 .woocommerce #payment #place_order,
 .woocommerce-page #payment #place_order {
-	font-family: var(--btns-font);
-	font-size: var(--btns-fontsize);
-	background: var(--secondary);
-	color: #fff;
-	padding: var(--btns-padding);
+	font-family: var(--btns-font) !important;
+	font-size: var(--btns-fontsize) !important;
+	background: #426ef1 !important;
+	color: #fff !important;
+	padding: var(--btns-padding) !important;
 	display: inline-block;
 	transition: all 0.2s ease-out;
 	font-weight: 600;
@@ -715,8 +717,9 @@ h6,
 	text-decoration: none;
 	white-space: nowrap;
 	width: max-content;
+
 	a {
-		color:#FFF;
+		color: #FFF;
 	}
 }
 
@@ -728,8 +731,8 @@ h6,
 .woocommerce div.product form.cart .button:hover,
 .woocommerce #payment #place_order:hover,
 .woocommerce-page #payment #place_order:hover {
-	background: var(--s-hover);
-	color: #fff;
+	background: #1b4feb !important;
+	color: #fff !important;
 	transition: all 0.2s ease-out;
 	border: 1px solid transparent;
 }
@@ -757,11 +760,11 @@ h6,
 }
 
 .white-btn {
-	font-family: var(--btns-font);
-	font-size: var(--btns-fontsize);
-	background: #fff;
-	color: var(--primary);
-	padding: var(--btns-padding);
+	font-family: var(--btns-font) !important;
+	font-size: var(--btns-fontsize) !important;
+	background: #fff !important;
+	color: var(--primary) !important;
+	padding: var(--btns-padding) !important;
 	display: inline-block;
 	transition: all 0.2s ease-out;
 	font-weight: 600;
@@ -773,8 +776,8 @@ h6,
 }
 
 .white-btn:hover {
-	background: var(--p-300);
-	color: #fff;
+	background: #93abf2 !important;
+	color: #fff !important;
 	transition: all 0.2s ease-out;
 	border: 1px solid transparent;
 }
@@ -953,6 +956,10 @@ h6,
 }
 
 /*--- !MENU  ---*/
+
+.masthead .brand img {
+    height: 3rem; /* To jest odpowiednik klasy h-12 w Tailwind */
+}
 
 .fixed-top {
 	height: var(--menu-height);
@@ -1689,9 +1696,9 @@ p {}
 }
 
 .woocommerce-order-details {
-	color: #fff;B
+	color: #fff;
 
-	a {
+	B a {
 		color: #fff;
 	}
 }
@@ -1701,6 +1708,7 @@ p {}
 	footer .__wrap {
 		display: none;
 	}
+
 	.__top-btn {
 		display: none;
 	}

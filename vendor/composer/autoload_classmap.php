@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Blocks\\About' => $baseDir . '/app/Blocks/About.php',
     'App\\Blocks\\Accordion' => $baseDir . '/app/Blocks/Accordion.php',
+    'App\\Blocks\\Agenda' => $baseDir . '/app/Blocks/Agenda.php',
     'App\\Blocks\\AreaBlock' => $baseDir . '/app/Blocks/AreaBlock.php',
     'App\\Blocks\\Benefit' => $baseDir . '/app/Blocks/Benefit.php',
     'App\\Blocks\\BottomBlock' => $baseDir . '/app/Blocks/BottomBlock.php',
@@ -51,6 +52,7 @@ return array(
     'App\\Blocks\\Reviews' => $baseDir . '/app/Blocks/Reviews.php',
     'App\\Blocks\\Slides' => $baseDir . '/app/Blocks/Slides.php',
     'App\\Blocks\\Speakers' => $baseDir . '/app/Blocks/Speakers.php',
+    'App\\Blocks\\Start' => $baseDir . '/app/Blocks/Start.php',
     'App\\Blocks\\Steps' => $baseDir . '/app/Blocks/Steps.php',
     'App\\Blocks\\Table' => $baseDir . '/app/Blocks/Table.php',
     'App\\Blocks\\Tailored' => $baseDir . '/app/Blocks/Tailored.php',
@@ -67,6 +69,7 @@ return array(
     'App\\Blocks\\Video' => $baseDir . '/app/Blocks/Video.php',
     'App\\Blocks\\Works' => $baseDir . '/app/Blocks/Works.php',
     'App\\Blocks\\Workshops' => $baseDir . '/app/Blocks/Workshops.php',
+    'App\\Fields\\AgendaSettings' => $baseDir . '/app/Fields/AgendaSettings.php',
     'App\\Fields\\Area' => $baseDir . '/app/Fields/Area.php',
     'App\\Fields\\Bottom' => $baseDir . '/app/Fields/Bottom.php',
     'App\\Fields\\OfferCards' => $baseDir . '/app/Fields/OfferCards.php',

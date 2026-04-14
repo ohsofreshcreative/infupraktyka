@@ -14,26 +14,16 @@ $sectionClass .= $brandbg ? ' section-brand' : '';
 	<div class="__wrapper c-main">
 		<div class="">
 
-			<div class="__top grid grid-cols-1 md:grid-cols-2 items-end gap-8">
-				<div class="__header">
-					<p data-gsap-element="subtitle" class="__subtitle subtitle-s">{{ strip_tags($g_cards['subtitle']) }}</p>
-					<h2 data-gsap-element="header" class="text-white">{{ strip_tags($g_cards['header']) }}</h2>
-				</div>
-				<div data-gsap-element="txt" class="text-2xl text-white">
-					{!! $g_cards['text'] !!}
-				</div>
+			<div class="__top">
+					<h2 data-gsap-element="header" class="text-white text-center">{{ strip_tags($g_cards['header']) }}</h2>
 			</div>
 
-			@if (!empty($g_cards['r_cards']))
-			@php
-			$gridCols = $grid_cols ?? 4; // Użyj 4 jako domyślnej wartości, jeśli nic nie wybrano
-			$gridClass = 'grid-cols-1 lg:grid-cols-' . $gridCols;
-			@endphp
-
-			<div data-gsap-element="stagger" class="grid {{ $gridClass }} gap-8 mt-14">
+			<div data-gsap-element="stagger" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
 				@foreach ($g_cards['r_cards'] as $item)
-				<div class="__card relative bg-secondary b-shadow p-8">
+				<div class="__card relative bg-secondary border-s b-shadow p-8">
+				@if (!empty($item['image']))
 					<img class="mb-6" src="{{ $item['image']['url'] }}" alt="{{ $item['image']['alt'] ?? '' }}" />
+					@endif
 					<h6 class="m-title text-white">{{ $item['header'] }}</h6>
 					<p class="text-white">{{ $item['text'] }}</p>
 
@@ -43,7 +33,6 @@ $sectionClass .= $brandbg ? ' section-brand' : '';
 				</div>
 				@endforeach
 			</div>
-			@endif
 
 		</div>
 	</div>
