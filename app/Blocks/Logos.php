@@ -1,117 +1,41 @@
-<?php
+@php
+$sectionClass = '';
+$sectionClass .= $flip ? ' order-flip' : '';
+$sectionClass .= $wide ? ' wide' : '';
+$sectionClass .= $nomt ? ' !mt-0' : '';
+$sectionClass .= $gap ? ' wider-gap' : '';
 
-namespace App\Blocks;
-
-use Log1x\AcfComposer\Block;
-use StoutLogic\AcfBuilder\FieldsBuilder;
-
-class Logos extends Block
-{
-	public $name = 'Logotypy partnerów';
-	public $description = 'logos';
-	public $slug = 'logos';
-	public $category = 'formatting';
-	public $icon = 'images-alt';
-	public $keywords = ['tresc', 'logotypy', 'partnerzy'];
-	public $mode = 'edit';
-	public $supports = [
-		'align' => false,
-		'mode' => false,
-		'jsx' => true,
-		'anchor' => true,
-		'customClassName' => true,
-	];
-
-	public function fields()
-	{
-		$logos = new FieldsBuilder('logos');
-
-		$logos
-			->setLocation('block', '==', 'acf/logos') // ważne!
-			->addText('block-title', [
-				'label' => 'Tytuł',
-				'required' => 0,
-			])
-			->addAccordion('accordion1', [
-				'label' => 'Logotypy partnerów',
-				'open' => false,
-				'multi_expand' => true,
-			])
-			/*--- GROUP ---*/
-			->addTab('Elementy', ['placement' => 'top'])
-			->addGroup('g_logos', ['label' => ''])
-			->addText('title', ['label' => 'Tytuł'])
-			->addGallery('gallery', [
-				'label' => 'Logotypy',
-				'preview_size' => 'thumbnail',
-				'library' => 'all',
-				'min' => 1,
-			])
-			->endGroup()
-
-			/*--- USTAWIENIA BLOKU ---*/
-
-			->addTab('Ustawienia bloku', ['placement' => 'top'])
-			->addText('section_id', [
-				'label' => 'ID',
-			])
-			->addText('section_class', [
-				'label' => 'Dodatkowe klasy CSS',
-			])
-			->addTrueFalse('flip', [
-				'label' => 'Odwrotna kolejność',
-				'ui' => 1,
-				'ui_on_text' => 'Tak',
-				'ui_off_text' => 'Nie',
-			])
-			->addTrueFalse('wide', [
-				'label' => 'Szeroka kolumna',
-				'ui' => 1,
-				'ui_on_text' => 'Tak',
-				'ui_off_text' => 'Nie',
-			])
-			->addTrueFalse('nomt', [
-				'label' => 'Usunięcie marginesu górnego',
-				'ui' => 1,
-				'ui_on_text' => 'Tak',
-				'ui_off_text' => 'Nie',
-			])
-			->addTrueFalse('gap', [
-				'label' => 'Większy odstęp',
-				'ui' => 1,
-				'ui_on_text' => 'Tak',
-				'ui_off_text' => 'Nie',
-			])
-			->addSelect('background', [
-				'label' => 'Kolor tła',
-				'choices' => [
-					'none' => 'Brak (domyślne)',
-					'section-white' => 'Białe',
-					'section-light' => 'Jasne',
-					'section-gray' => 'Szare',
-					'section-brand' => 'Marki',
-					'section-gradient' => 'Gradient',
-					'section-dark' => 'Ciemne',
-				],
-				'default_value' => 'none',
-				'ui' => 0, // Ulepszony interfejs
-				'allow_null' => 0,
-			]);
-
-		return $logos;
-	}
-
-	public function with()
-	{
-		return [
-			'g_logos' => get_field('g_logos'),
-			'section_id' => get_field('section_id'),
-			'section_class' => get_field('section_class'),
-			'flip' => get_field('flip'),
-			'wide' => get_field('wide'),
-			'nomt' => get_field('nomt'),
-			'gap' => get_field('gap'),
-			'background' => get_field('background'),
-		];
-	}
+if (!empty($background) && $background !== 'none') {
+$sectionClass .= ' ' . $background;
 }
+@endphp
+
+<!--- logos -->
+
+<section data-gsap-anim="section" @if(!empty($section_id)) id="{{ $section_id }}" @endif class="b-logos c-main relative -smt {{ $sectionClass }} {{ $section_class }}">
+
+    <div class="__wrapper relative">
+        <h3 data-gsap-element="header" class="text-white w-full md:w-1/2">{{ $g_logos['title'] }}</h3>
+    </div>
+
+    @if (!empty($g_logos['logos_repeater']))
+    <div data-gsap-element="logos" class="__logos grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+        @foreach ($g_logos['logos_repeater'] as $logo_item)
+            @php
+                $image = $logo_item['image'];
+                $link = $logo_item['link'];
+            @endphp
+            <div class="__logo relative border border-secondary-100 rounded-2xl bg-white flex items-center justify-center h-40 p-8">
+                @if ($link)
+                    <a href="{{ $link['url'] }}" target="{{ $link['target'] ? $link['target'] : '_blank' }}" rel="noopener noreferrer" class="flex items-center justify-center w-full h-full">
+                @endif
+                    <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="max-h-20 w-auto">
+                @if ($link)
+                    </a>
+                @endif
+            </div>
+        @endforeach
+    </div>
+    @endif
+
+</section>
