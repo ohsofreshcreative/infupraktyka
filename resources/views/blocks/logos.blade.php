@@ -15,7 +15,7 @@ $sectionClass .= ' ' . $background;
 <section data-gsap-anim="section" @if(!empty($section_id)) id="{{ $section_id }}" @endif class="b-logos c-main relative -smt {{ $sectionClass }} {{ $section_class }}">
 
     <div class="__wrapper relative">
-        <h3 data-gsap-element="header" class="w-full md:w-1/2">{{ $g_logos['title'] }}</h3>
+        <h3 data-gsap-element="header" class="text-white w-full md:w-1/2">{{ $g_logos['title'] }}</h3>
     </div>
 
     @if (!empty($g_logos['logos_repeater']))
