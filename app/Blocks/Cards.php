@@ -51,7 +51,6 @@ class Cards extends Block
 				'label' => 'Kafelki',
 				'layout' => 'table', // 'row', 'block', albo 'table'
 				'min' => 1,
-				'max' => 4,
 				'button_label' => 'Dodaj kafelek'
 			])
 			->addImage('image', [
