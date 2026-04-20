@@ -1710,6 +1710,11 @@ p {}
 	}
 }
 
+#main > div > div > section.woocommerce-order-details > table > tbody > tr > td.woocommerce-table__product-name.product-name > a {
+		color:#FFF !important;
+		pointer-events: none !important;
+}
+
 
 /*--- !EN ---*/
 .page-id-654 {
