@@ -1703,6 +1703,14 @@ p {}
 	}
 }
 
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
+	a {
+		color:#FFF !important;
+		pointer-events: none !important;
+	}
+}
+
+
 /*--- !EN ---*/
 .page-id-654 {
 	footer .__wrap {

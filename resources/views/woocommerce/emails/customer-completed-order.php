@@ -28,7 +28,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <p>Dzień dobry,</p>
 
-<p>bardzo dziękujemy za rejestrację na II Kongres Polskiego Towarzystwa Pielęgniarstwa Infuzyjnego, który odbędzie się w dniach 7-9 października 2026 r. w Hotelu Copernicus w Toruniu. <b>Twoje zgłoszenie zostało przyjęte.</b></p>
+<p>bardzo dziękujemy za rejestrację na konferencję INFU Praktyka, która odbędzie się 19 czerwca 2026 roku w Białej Podlaskiej (Akademia Bialska im. Jana Pawła II, ul. Sidorska 95/97, Biała Podlaska).  <b>Twoje zgłoszenie zostało przyjęte.</b></p>
 
 <p>Status Twojej rejestracji na II Kongres Polskiego Towarzystwa Pielęgniarstwa Infuzyjnego został zmieniony na:
 
@@ -37,7 +37,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 <b>Dziękujemy, że będziesz z nami podczas konferencji!</b><br>
 
 <p>Więcej informacji o konferencji znajdziesz tutaj:<br>
-inukongres.pl<br><br>
+infupraktyka.pl<br><br>
 Serdecznie pozdrawiamy<br>
 Organizatorzy konferencji</p>
 
