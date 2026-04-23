@@ -30,7 +30,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <p>bardzo dziękujemy za rejestrację na konferencję INFU Praktyka, która odbędzie się 19 czerwca 2026 roku w Białej Podlaskiej (Akademia Bialska im. Jana Pawła II, ul. Sidorska 95/97, Biała Podlaska).  <b>Twoje zgłoszenie zostało przyjęte.</b></p>
 
-<p>Status Twojej rejestracji na II Kongres Polskiego Towarzystwa Pielęgniarstwa Infuzyjnego został zmieniony na:
+<p>Status Twojej rejestracji na konferencję INFU Praktyka został zmieniony na:
 
 <span style="color:#36d100;">OPŁACONY</span></p>
 
